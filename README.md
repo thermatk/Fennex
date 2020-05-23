@@ -14,10 +14,14 @@ cd rustup
 git checkout 1.21.1
 cd ..
 ```
-### Pre-Build
+### Some machine-specific stuff
 ```
 export NDK=/opt/android-sdk/ndk/20.1.5948944
 export ANDROID_HOME=/opt/android-sdk
+export GRADLEPATH=$(which gradle5)
+```
+### Pre-Build
+```
 cd mozilla-release
 sed -i -e '/crashreporter/d' Cargo.toml
 echo "ac_add_options --enable-application=mobile/android" >> .mozconfig
@@ -30,7 +34,7 @@ echo "ac_add_options --disable-crashreporter" >> .mozconfig
 echo "ac_add_options --with-branding=mobile/android/branding/unofficial" >> .mozconfig
 echo "export MOZ_INSTALL_TRACKING=" >> .mozconfig
 echo "export MOZ_NATIVE_DEVICES=" >> .mozconfig
-echo "ac_add_options --with-gradle=$(which gradle5)" >> .mozconfig
+echo "ac_add_options --with-gradle=$GRADLEPATH" >> .mozconfig
 sed -i -e 's/raise MissingFileError(/self.logger.log(logging.INFO, "IGNORED: "+/g' python/mach/mach/main.py
 sed -i -e "s/HEALTHREPORT\', True/HEALTHREPORT\', False/g" mobile/android/moz.configure
 rm -R third_party/rust/winapi-*-pc-windows-gnu/lib/*.a
