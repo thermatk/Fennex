@@ -6,6 +6,9 @@ REPO=$( echo $( cd `dirname $0`; pwd ) )
 # copy config
 cp -f $REPO/.mozconfig ./
 
+# include gradle in config
+echo "ac_add_options --with-gradle=$(which gradle)" >> .mozconfig
+
 # remove elfhack
 sed -i -e 's/default=default_elfhack/default=False/g' toolkit/moz.configure
 
