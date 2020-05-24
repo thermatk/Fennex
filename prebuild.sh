@@ -29,10 +29,19 @@ sed -i -e '/crashreporter/d' Cargo.toml
 # Fix Gradle for fdroid
 sed -i -e '/.variant.name}AndroidTest/d' mobile/android/gradle.configure
 
-# fix cleaning errors
+# 1/2 fix cleaning errors
 sed -i -e 's/raise MissingFileError(/self.logger.log(logging.INFO, "IGNORED: "+/g' python/mach/mach/main.py
 
-# clean scanerrors
+# 2/2 ugly way to fix errors after cleaning
+sed -i -e '/testing\/talos/d' toolkit/toolkit.mozbuild
+sed -i -e '/test\/mochitest/d' -e '/test\/unit\/xpcshell/d' modules/libjar/moz.build
+sed -i -e '/test\/unit\/xpcshell/d' toolkit/components/mediasniffer/moz.build
+sed -i -e '/tests\/xpcshell/d' -e '/tests\/SearchTestUtils/d' toolkit/components/search/moz.build
+sed -i -e '/tests\/unit\/xpcshell/d' -e '/unit\/TelemetryArchiveTesting.jsm/d' toolkit/components/telemetry/moz.build
+rm mobile/android/geckoview/src/androidTest/assets/moz.build
+sed -i -e '/src\/androidTest\/assets/d' mobile/android/moz.build
+
+# actual cleaning
 rm -R third_party/rust/winapi-*-pc-windows-gnu/lib/*.a
 rm -R tools/update-packaging/test/
 rm -R third_party/rust/miniz_oxide/tests/
