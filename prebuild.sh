@@ -57,7 +57,7 @@ sed -i -e 's/,"tests\/[^:]*:"[^"]*"//g' third_party/rust/sha-1/.cargo-checksum.j
 rm -R third_party/rust/deflate/tests/
 sed -i -e 's/,"tests\/[^:]*:"[^"]*"//g' third_party/rust/deflate/.cargo-checksum.json
 rm -R third_party/rust/rust_cascade/test_data/
-sed -i -e 's/,"tests\/[^:]*:"[^"]*"//g' third_party/rust/rust_cascade/.cargo-checksum.json
+sed -i -e 's/,"tests\/[^:]*:"[^"]*"//g' -e 's/,"test_data\/[^:]*:"[^"]*"//g' third_party/rust/rust_cascade/.cargo-checksum.json
 rm -R modules/libjar/test/
 rm -R toolkit/mozapps/extensions/test/
 rm -R toolkit/mozapps/update/tests/
