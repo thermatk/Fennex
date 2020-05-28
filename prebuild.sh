@@ -40,7 +40,6 @@ sed -i -e '/tests\/xpcshell/d' -e '/tests\/SearchTestUtils/d' toolkit/components
 sed -i -e '/tests\/unit\/xpcshell/d' -e '/unit\/TelemetryArchiveTesting.jsm/d' toolkit/components/telemetry/moz.build
 rm mobile/android/geckoview/src/androidTest/assets/moz.build
 sed -i -e '/src\/androidTest\/assets/d' mobile/android/moz.build
-sed -i -e '/xpcshellTestRoot.der/d' security/apps/moz.build
 sed -i -e '/tests\/mochitest.ini/d' dom/file/moz.build
 sed -i -e '/test\/forms\/mochitest.ini/d' -e '/test\/mochitest.ini/d' -e '/test\/forms\/chrome.ini/d' -e '/test\/chrome.ini/d' -e '/test\/browser.ini/d' dom/html/moz.build
 sed -i -e '/identity\/mochitest.ini/d' -e '/test\/mochitest.ini/d' dom/media/moz.build
