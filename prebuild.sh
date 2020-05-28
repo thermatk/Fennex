@@ -91,7 +91,6 @@ rm -R devtools/client/debugger/test/
 rm -R security/nss/cmd/bltest/tests/
 rm -R security/nss/cmd/samples/
 rm -R security/nss/tests/
-rm -R security/manager/ssl/tests/
 rm -R security/manager/ssl/osclientcerts/test/
 rm -R media/webrtc/trunk/webrtc/test/
 rm -R intl/icu/source/test/testdata/
