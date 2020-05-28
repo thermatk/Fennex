@@ -73,3 +73,30 @@ rm -R toolkit/crashreporter/google-breakpad/src/tools/windows/
 rm -R testing/raptor/raptor/profiler/dump_syms_mac
 rm -R testing/web-platform/
 rm -R testing/talos/talos/
+rm -R docshell/test/
+rm services/settings/dumps/blocklists/addons-bloomfilters/addons-mlbf.bin
+rm devtools/client/debugger/packages/devtools-wasm-dwarf/wasm/dwarf_to_json.wasm
+rm -R devtools/client/debugger/test/
+rm -R security/nss/cmd/bltest/tests/
+rm -R security/nss/cmd/samples/
+rm -R security/nss/tests/
+rm -R security/manager/ssl/tests/
+rm -R security/manager/ssl/osclientcerts/test/
+rm -R media/webrtc/trunk/webrtc/test/
+rm -R intl/icu/source/test/testdata/
+rm -R layout/reftests/
+rm -R other-licenses/nsis/nsisui.exe
+rm -R other-licenses/7zstub/src/bin
+rm -R build/pymake/tests/
+rm -R dom/html/test/
+rm -R dom/security/test/
+rm -R dom/tests/
+rm -R dom/xhr/tests/
+rm -R dom/base/test/
+rm -R dom/media/test/
+rm -R dom/media/gtest/
+rm -R dom/media/mediasource/test/
+rm -R xpcom/tests/
+rm -R browser/branding/*/dsstore
+rm -R browser/components/migration/tests/unit/
+rm -R netwerk/test/unit/data/signed_win.exe
