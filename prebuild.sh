@@ -40,6 +40,17 @@ sed -i -e '/tests\/xpcshell/d' -e '/tests\/SearchTestUtils/d' toolkit/components
 sed -i -e '/tests\/unit\/xpcshell/d' -e '/unit\/TelemetryArchiveTesting.jsm/d' toolkit/components/telemetry/moz.build
 rm mobile/android/geckoview/src/androidTest/assets/moz.build
 sed -i -e '/src\/androidTest\/assets/d' mobile/android/moz.build
+sed -i -e '/xpcshellTestRoot.der/d' security/apps/moz.build
+sed -i -e '/tests\/mochitest.ini/d' dom/file/moz.build
+sed -i -e '/test\/forms\/mochitest.ini/d' -e '/test\/mochitest.ini/d' -e '/test\/forms\/chrome.ini/d' -e '/test\/chrome.ini/d' -e '/test\/browser.ini/d' dom/html/moz.build
+sed -i -e '/identity\/mochitest.ini/d' -e '/test\/mochitest.ini/d' dom/media/moz.build
+sed -i -e '/test\/mochitest.ini/d' dom/media/mediasource/moz.build dom/workers/moz.build dom/serviceworkers/moz.build
+sed -i -e '/test\/browser.ini/d' dom/workers/moz.build
+sed -i -e '/tests\/mochitest.ini/d' -e '/tests\/browser.ini/d' dom/xhr/moz.build
+sed -i -e '/crashtest\/crashtests.list/d' -e '/reftests/d' layout/moz.build
+sed -i -e '/test\/unit_ipc\/xpcshell/d' -e '/test\/unit\/xpcshell/d' -e '/mochitest.ini/d' -e '/test\/chrome/d' -e '/test\/navigation/d' -e '/test\/browser/d' docshell/moz.build
+sed -i -e '/test\/mochitest/d' toolkit/components/extensions/moz.build
+sed -i -e '/addons-mlbf.bin/d' services/settings/dumps/blocklists/moz.build
 
 # actual cleaning
 rm -R third_party/rust/winapi-*-pc-windows-gnu/lib/*.a
@@ -94,7 +105,6 @@ rm -R dom/tests/
 rm -R dom/xhr/tests/
 rm -R dom/base/test/
 rm -R dom/media/test/
-rm -R dom/media/gtest/
 rm -R dom/media/mediasource/test/
 rm -R xpcom/tests/
 rm -R browser/branding/*/dsstore
