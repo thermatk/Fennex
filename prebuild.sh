@@ -108,3 +108,5 @@ rm -R xpcom/tests/
 rm -R browser/branding/*/dsstore
 rm -R browser/components/migration/tests/unit/
 rm -R netwerk/test/unit/data/signed_win.exe
+rm -R security/manager/ssl/tests/unit/test_cert_storage_preexisting/data.safe.bin
+rm -R security/manager/ssl/tests/unit/test_cert_storage_preexisting_crlite/data.safe.bin
